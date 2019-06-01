@@ -4,7 +4,7 @@ compile_lib:./src/*.cpp consui.h
 	rm *.o
 
 compile:./consui.a consui.h ./*.cpp
-	g++ -std=c++11 -o main ./*.cpp ../consui.a -I ../ -l ncurses
+	g++ -std=c++11 -o main ./*.cpp ./consui.a -l ncurses
 
 run:
 	./main

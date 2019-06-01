@@ -1,9 +1,13 @@
 # console-ui
 Pure C++, Lite weight UI Kit for POSIX terminal.
 
-## Describe UI by Pure C++ language
+## Describe UI in Pure C++ language
 
-With simple code like this, you can describe an interface.
+With simple code, you can describe an interface like this:
+
+![](./images/img1.png)
+
+code:
 
 ```cpp
 void description(Canvas *cv)
@@ -28,4 +32,36 @@ void description(Canvas *cv)
 }
 ```
 
-- Event Driven
+## Event Driven
+
+Using or Inheritance the `Action` class, you can save data you need in the action.
+
+- **Bind an action to a button**
+  
+  just pass the action in when constructing the button.
+- **Combine multiple action**
+  
+  Construct an `Actions` class to combine two action. (They will execute in order)
+- **Bind action to special events**
+  
+  `Canvas` provide `start` and `update` action pointer, point them to action you want to make actions on Canvas start or update.
+
+  `TextField` provide `finish` and `entering` action pointer, point them to action you want to make actions on `TextField` been focused or user finish entering.
+
+## Change Canvas
+
+- Start with a Canvas by `Screen::initRoot()`
+
+- Change Canvas by `Screen::setRoot()`
+
+## How to use
+
+To run the example, just
+
+```bash
+make compile_lib
+make compile
+make run
+```
+
+To write your own program, just keep it in the `console-ui` folder.

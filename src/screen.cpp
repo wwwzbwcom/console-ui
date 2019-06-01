@@ -88,7 +88,7 @@ void Screen::setRoot(Canvas *canvas)
         if (hasExit)    return;
 
         refresh();
-        mvprintw(0, 0, "%d", key);
+        //mvprintw(0, 0, "%d", key);
     }
 
     return;
